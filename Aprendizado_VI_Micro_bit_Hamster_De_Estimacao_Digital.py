@@ -5,7 +5,7 @@ def on_logo_pressed():
     # Mostrar o icone Hamster
     basic.show_icon(IconNames.ASLEEP)
     # Tocar uma música/melodia;
-    music._play_default_background(music.built_in_playable_melody(Melodies.DADADADUM),
+    music._play_default_background(music.built_in_playable_melody(Melodies.CHASE),
         music.PlaybackMode.IN_BACKGROUND)
 input.on_logo_event(TouchButtonEvent.PRESSED, on_logo_pressed)
 
@@ -22,4 +22,8 @@ input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
 # Moistrar icone inicial
 basic.show_icon(IconNames.TSHIRT)
+basic.pause(2000)
+basic.clear_screen()
 basic.show_icon(IconNames.HAPPY)
+music._play_default_background(music.built_in_playable_melody(Melodies.ENTERTAINER),
+    music.PlaybackMode.IN_BACKGROUND)
